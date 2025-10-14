@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sqyrix - Kod Öğreniyorum</title>
+    <link rel="stylesheet" href="deneme.css">
+</head>
+<body>
+    <!-- Header: Sayfanın üst kısmı -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Sqyrix</h1>
+            <nav class="navbar">
+                <a href="#home">Ana Sayfa</a>
+                <a href="#about">Hakkımda</a>
+                <a href="#projects">Projeler</a>
+                <a href="#contact">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Ana İçerik -->
+    <main>
+        <!-- Hero Bölümü: Hoş geldin mesajı -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Ben Sqyrix</h1>
+                    <p>Kod öğrenmeye başlıyorum ve bu serüveni paylaşıyorum.</p>
+                    <button class="btn" onclick="sayHello()">Bana Merhaba De!</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hakkımda Bölümü -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Hakkımda</h2>
+                <p>Merhaba! Ben Sqyrix ve kodlama öğreniyorum. Bu web sitesi benim ilk projelerimden biri. HTML, CSS ve JavaScript'i öğrenirken bu siteyi adım adım geliştiriyorum.</p>
+                
+                <h3>Şu ana kadar öğrendiklerim:</h3>
+                <ul class="skills-list">
+                    <li>HTML - Web sayfalarının temel yapısı</li>
+                    <li>CSS - Sayfalara stil vermek</li>
+                    <li>JavaScript - Sayfayı etkileşimli yapmak</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projeler Bölümü -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Basit Projelerim</h2>
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <h3>İlk Web Sayfam</h3>
+                        <p>HTML ve CSS kullanarak yaptığım ilk web sitesi.</p>
+                        <button class="btn-small" onclick="showProject('web')">Detayları Gör</button>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Hesap Makinesi</h3>
+                        <p>JavaScript ile basit bir hesap makinesi.</p>
+                        <button class="btn-small" onclick="showProject('calc')">Detayları Gör</button>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Renk Değiştirici</h3>
+                        <p>Butona tıklayınca sayfa rengini değiştiren buton.</p>
+                        <button class="btn-small" onclick="changeBackgroundColor()">Dene!</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim Bölümü -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>İletişim</h2>
+                <p>Benimle kodlama hakkında konuşmak istersen:</p>
+                
+                <div class="contact-info">
+                    <p>📧 Email: sqyrix@gmail.com</p>
+                    <p>🐱 GitHub: github.com/sqyrix</p>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Mesaj Gönder</h3>
+                    <form onsubmit="sendMessage(event)">
+                        <input type="text" id="name" placeholder="Adın" required>
+                        <textarea id="message" placeholder="Mesajın" required></textarea>
+                        <button type="submit" class="btn">Mesaj Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: Sayfanın alt kısmı -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Sqyrix - Tüm Hakları Saklıdır</p>
+        </div>
+    </footer>
+
+    <script src="deneme.js"></script>
+</body>
+</html>
