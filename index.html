@@ -244,20 +244,28 @@
                     </div>
                 </div>
             </div>
-            <form class="contact-form" onsubmit="event.preventDefault(); showSuccess();">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xaqnekwn" method="POST">
+                <input type="hidden" name="_subject" value="Yeni İletişim Formu Mesajı - sqyrix.com">
+                <input type="hidden" name="_template" value="table">
                 <div class="form-group">
-                    <input type="text" placeholder="Adınız" required>
+                    <input type="text" name="name" placeholder="Adınız" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="E-posta Adresiniz" required>
+                    <input type="email" name="email" placeholder="E-posta Adresiniz" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" placeholder="Konu">
+                    <input type="text" name="subject" placeholder="Konu">
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Mesajınız" rows="5" required></textarea>
+                    <textarea name="message" placeholder="Mesajınız" rows="5" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Gönder <i class="fas fa-paper-plane"></i></button>
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    <span class="btn-text">Gönder</span>
+                    <span class="btn-loading" style="display: none;"><i class="fas fa-spinner fa-spin"></i> Gönderiliyor...</span>
+                    <span class="btn-success" style="display: none;"><i class="fas fa-check"></i> Gönderildi!</span>
+                    <i class="fas fa-paper-plane btn-icon"></i>
+                </button>
+                <p class="form-message" id="formMessage"></p>
             </form>
         </div>
     </section>
